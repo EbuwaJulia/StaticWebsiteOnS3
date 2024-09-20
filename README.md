@@ -23,3 +23,8 @@ To learn how to upload files, configure S3 for static hosting, and making the si
     ]
 }
 ```
+### Procedure
+**Note: Follow the Green Arrow in the Visual Aid**
+* Sign-in to AWS Management Console
+* Type S3 in the search bar at the top of the console dashboard.
+* 
