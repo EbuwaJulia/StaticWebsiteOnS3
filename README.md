@@ -1,4 +1,4 @@
-# StaticWebsiteOnS3
+![image](https://github.com/user-attachments/assets/daf81032-16a6-4f8a-bc3a-a2c615ee00d3)# StaticWebsiteOnS3
 ### Skills
 * Static Web Hosting
 * Basic Web development
@@ -31,4 +31,10 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Under General Configurations, Select *General Purpose* for Bucket type, input a *globally unique bucketname*.
 * Under Object Ownership, Leave as Default ACLs Disabled(Recommended)
 * Under Block Public Access settings for this bucket, *Unselect Block all public access*.  ![Screenshot (761)](https://github.com/user-attachments/assets/4ba79009-5460-4351-9a7a-460cc2731db5)
+* Select the acknowledgement to turn off block public access. ![Screenshot (762)](https://github.com/user-attachments/assets/d85f1f8b-9ffa-499b-88e9-9539f5cca034)
+* Leave other options as Default and Click *Create bucket*. This would take you to the bucket list on the S3 dashboard.
+* Double-click on your bucket name. Click *Upload*, and on the new page, Click *Add Files*
+* If the files are in a folder, open the folder, select all the items in the folder and click *Open*. Do this for all the necessary files. ![Screenshot (764)](https://github.com/user-attachments/assets/b43ae1e3-075e-4a4b-b5f1-2cdbc9609204)
+
+* 
 
