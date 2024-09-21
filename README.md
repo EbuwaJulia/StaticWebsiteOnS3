@@ -35,6 +35,13 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Leave other options as Default and Click *Create bucket*. This would take you to the bucket list on the S3 dashboard.
 * Double-click on your bucket name. Click *Upload*, and on the new page, Click *Add Files*
 * If the files are in a folder, open the folder, select all the items in the folder and click *Open*. Do this for all the necessary files. ![Screenshot (764)](https://github.com/user-attachments/assets/b43ae1e3-075e-4a4b-b5f1-2cdbc9609204)
+* Scroll to the bottom and Click Upload.
+* Wait a few seconds for the files to upload successfully ![Screenshot (765)](https://github.com/user-attachments/assets/48fa0729-2df0-4fdb-a089-7b31a62619d6)
+* Click Close on the top right corner to return to the bucket dashboard.
+* On the bucket dashboard, Click on the Properties tab, Scroll down to static website hosting and click edit.
+* Select Enable static website hosting. Scroll down to Index document and type index.html, leave others as default and click Save Changes.
+* Still on the Properties tab, Scroll down to Static Website hosting again. This time, the bucket URL would be available. Copy and paste on a new browser tab.![Screenshot (766)](https://github.com/user-attachments/assets/63c7fa6a-3e36-4aa1-80fa-306e51f7b756)
+* 
 
 * 
 
