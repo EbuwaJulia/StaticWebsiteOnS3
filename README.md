@@ -41,7 +41,10 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * On the bucket dashboard, Click on the Properties tab, Scroll down to static website hosting and click edit.
 * Select Enable static website hosting. Scroll down to Index document and type index.html, leave others as default and click Save Changes.
 * Still on the Properties tab, Scroll down to Static Website hosting again. This time, the bucket URL would be available. Copy and paste on a new browser tab.![Screenshot (766)](https://github.com/user-attachments/assets/63c7fa6a-3e36-4aa1-80fa-306e51f7b756)
-* 
+* The bucket url should display 403 Forbidden error at this point.
+* To display the content of the bucket, Scroll up and Click on the Permissions tab
+* Scroll down to Bucket policy and click Edit
+* Copy and paste the bucket policy 
 
 * 
 
