@@ -44,7 +44,7 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * The bucket url should display 403 Forbidden error at this point.
 * To display the content of the bucket, Scroll up and Click on the Permissions tab
 * Scroll down to Bucket policy and click Edit
-* Copy and paste the bucket policy stated above [Amazon S3 Bucket Policy](http://devopsroadtrip.s3-website-us-west-2.amazonaws.com)
+* Copy and paste the bucket policy stated above [Amazon S3 Bucket Policy](https://github.com/EbuwaJulia/StaticWebsiteOnS3/edit/main/README.md#amazon-s3-bucket-policy)
 
 * 
 
