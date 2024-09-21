@@ -33,8 +33,10 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Under Block Public Access settings for this bucket, ***Unselect Block all public access***.  ![Screenshot (761)](https://github.com/user-attachments/assets/4ba79009-5460-4351-9a7a-460cc2731db5)
 * Select the acknowledgement to turn off block public access. ![Screenshot (762)](https://github.com/user-attachments/assets/d85f1f8b-9ffa-499b-88e9-9539f5cca034)
 * Leave other options as Default and Click ***Create bucket***. This would take you to the bucket list on the S3 dashboard.
-* Double-click on your bucket name. Click ***Upload***, and on the new page, Click ***Add Files***
-* If the files are in a folder, open the folder, select all the items in the folder and click *Open*. Do this for all the necessary files. ![Screenshot (764)](https://github.com/user-attachments/assets/b43ae1e3-075e-4a4b-b5f1-2cdbc9609204)
+* Double-click on your bucket name. Click ***Upload***.
+* On the next page, you have two options to uploading files. First is to drag and drop the files and folders in the root dirctory. Please note, do not drag and drop the root directory itself, but the content of the root directory ![Screenshot (768)](https://github.com/user-attachments/assets/60bfd73a-ba0d-4d7d-9762-d59dc238bb23)
+* ***Add Files***
+* Select the root folder containing all. ![Screenshot (764)](https://github.com/user-attachments/assets/b43ae1e3-075e-4a4b-b5f1-2cdbc9609204)
 * Scroll to the bottom and Click ***Upload***.
 * Wait a few seconds for the files to upload successfully ![Screenshot (765)](https://github.com/user-attachments/assets/48fa0729-2df0-4fdb-a089-7b31a62619d6)
 * Click ***Close*** on the top right corner to return to the bucket dashboard.
