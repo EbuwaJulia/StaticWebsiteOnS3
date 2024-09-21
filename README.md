@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/daf81032-16a6-4f8a-bc3a-a2c615ee00d3)# StaticWebsiteOnS3
+![image](https://github.com/user-attachments/assets/59e8915f-5fd7-4cd9-b2d0-afc6c85f1570)![image](https://github.com/user-attachments/assets/daf81032-16a6-4f8a-bc3a-a2c615ee00d3)# StaticWebsiteOnS3
 ### Skills
 * Static Web Hosting
 * Basic Web development
@@ -35,10 +35,11 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Leave other options as Default and Click ***Create bucket***. This would take you to the bucket list on the S3 dashboard.
 * Double-click on your bucket name. Click ***Upload***.
 * On the next page, you have two options to uploading files. First is to drag and drop the files and folders in the root dirctory. Please note, do not drag and drop the root directory itself, but the content of the root directory ![Screenshot (768)](https://github.com/user-attachments/assets/60bfd73a-ba0d-4d7d-9762-d59dc238bb23)
-* ***Add Files***
-* Select the root folder containing all. ![Screenshot (764)](https://github.com/user-attachments/assets/b43ae1e3-075e-4a4b-b5f1-2cdbc9609204)
+* Second option is to upload the files and folders in the root directory separately.
+* Select ***Add Files***, navigate to the root directory, select all files and click Open.
+* Select ***Add Folders***, navigate to the root directory, select all folders and click Open.
 * Scroll to the bottom and Click ***Upload***.
-* Wait a few seconds for the files to upload successfully ![Screenshot (765)](https://github.com/user-attachments/assets/48fa0729-2df0-4fdb-a089-7b31a62619d6)
+* Wait a few seconds for the files to upload successfully ![Screenshot (769)](https://github.com/user-attachments/assets/d2029640-dfac-4c1e-8872-2a8390bd07fb)
 * Click ***Close*** on the top right corner to return to the bucket dashboard.
 * On the bucket dashboard, Click on the ***Properties tab***, Scroll down to static website hosting and click edit.
 * Select ***Enable static website hosting***. Scroll down to Index document and type ***index.html***, leave others as default and click ***Save Changes***.
