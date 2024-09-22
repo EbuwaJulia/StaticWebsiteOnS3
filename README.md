@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/59e8915f-5fd7-4cd9-b2d0-afc6c85f1570)![image](https://github.com/user-attachments/assets/daf81032-16a6-4f8a-bc3a-a2c615ee00d3)# StaticWebsiteOnS3
+# StaticWebsiteOnS3
 ### Skills
 * Static Web Hosting
 * Basic Web development
