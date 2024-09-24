@@ -25,8 +25,8 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 ```
 ### Procedure
 **Note: Follow the Green Arrow in the Visual Aids**
-* Navigate to Amazon Route53 to purchase a domain name
-* Click on Registered Domains > Register domain > input desired domain name in the Contact Details, for example EbuwaJulia.com > search
+* Navigate to ***Amazon Route53*** to purchase a domain name
+* Click on ***Registered Domains*** > Register domain > input desired domain name in the Contact Details, for example EbuwaJulia.com, then click search
 * Under search result, if chosen domain name is available, click Select > Proceed to checkout ![Screenshot (784)](https://github.com/user-attachments/assets/8a72ea77-b673-4d52-81f7-0fdef4279f65)
 * Optionally Unclick Auto-Renew > Click Next
 * fill in your contact details.
@@ -63,7 +63,7 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Click on hosted zones > the registered domain name
 * Click Create record. This record ensures the S3 url is routed to our domain name
 * Under Record name, Enter a subdomain or leave blank to create a record for the root domain
-* Under Record type, Select CNAME -Routes traffic to another domain name and to some AWS resources
+* Under Record type, Select CNAME - Routes traffic to another domain name and to some AWS resources
 * For Value, input the S3 bucket endpoint without the http:// prefix
 * Leave the TTL as default 
 * Click create records ![Screenshot (785)](https://github.com/user-attachments/assets/a13190c7-53bb-46e4-83b2-6e56bb7cf449)
@@ -94,8 +94,26 @@ To learn how to upload files, configure S3 for static hosting, and making the si
   * navigate to hosted zones > click on the domain name
   * On the list of records, you should now see the newly created CNAME
   * Back in Certificate manager, wait till status shows Success and the Certificate ID status shows issued. You can keep refreshing till this happens
+
 **Now the Certificate has been issued**
 * Go back to custom SSL Certificate under Settings under Distribution 
-* REfresh
+* Click REfresh next to the certificate drop-down box
+* Select the newly issued certificate
+* Selectb enable security protections
+* Leave everything else to default and Click Create Distribution
+* Wait for distribution to be created
+* You can go back to distributions dashboard and click refresh button beside the Enable button till the last modified tab changes from Deploying
+* While waiting for the distribution to be created, you can go ahead and modify the Domain name provided by Cloudfront.
+* Right click and copy the Domain name
+* Navigate back to route 53
+* Click on the CNAME created for the S3 endpoint > Click Edit Record
+* Change the value from the S3 endpoint to the Copied CloudFront endpoint
+* Click Save.
+* Go back to the distribution dashboard and keep refreshing till it is deployed.
+* After it is deployed, verify the static website endpoint can be accessed using https://custom-domain-name
+
+**If your website renders, Voila!!! you have successfully deployed a secured static website with custom domain and TLS and distributed it using CloudFront**
+
+**You can also try accessing the website using http://custom-domain-name. This should redirect to https://custom-domain-name since it was configured in the settings.**
 
 
