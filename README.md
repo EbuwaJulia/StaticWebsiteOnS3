@@ -27,11 +27,11 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 **Note: Follow the Green Arrow in the Visual Aids**
 * Navigate to ***Amazon Route53*** to purchase a domain name
 * Click on ***Registered Domains*** > Register domain > input desired domain name in the Contact Details, for example EbuwaJulia.com, then click search
-* Under search result, if chosen domain name is available, click Select > Proceed to checkout ![Screenshot (784)](https://github.com/user-attachments/assets/8a72ea77-b673-4d52-81f7-0fdef4279f65)
-* Optionally Unclick Auto-Renew > Click Next
+* Under ***search result***, if chosen domain name is available, click ***Select*** > ***Proceed to checkout*** ![Screenshot (784)](https://github.com/user-attachments/assets/8a72ea77-b673-4d52-81f7-0fdef4279f65)
+* Optionally ***Unclick Auto-Renew*** > Click ***Next***
 * fill in your contact details.
 * Accept terms and conditions and complete order.
-* Once the domain name has been created, navigate to Amazon S3.
+* Once the domain name has been created, Navigate to Amazon S3.
 * Type S3 in the search bar at the top of the console dashboard and click S3. This leads to the S3 dashboard.![Screenshot (760)](https://github.com/user-attachments/assets/e84f5cf8-a6c9-47ae-8767-04fd2edc3c01)
 * On the S3 dashboard, Click ***Create bucket***
 * Under General Configurations, Select ***General Purpose*** for Bucket type, input *your domain name*.
@@ -59,56 +59,56 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Refresh the website tab. Voila!!! Content is rendered.
 * You have successfully deployed a static website. But at this point, the website is yet to reflect the domain website.
 **How to Change S3 bucket url to custom Domain name**
-* Navigate to Route 53
-* Click on hosted zones > the registered domain name
-* Click Create record. This record ensures the S3 url is routed to our domain name
-* Under Record name, Enter a subdomain or leave blank to create a record for the root domain
-* Under Record type, Select CNAME - Routes traffic to another domain name and to some AWS resources
-* For Value, input the S3 bucket endpoint without the http:// prefix
-* Leave the TTL as default 
-* Click create records ![Screenshot (785)](https://github.com/user-attachments/assets/a13190c7-53bb-46e4-83b2-6e56bb7cf449)
+* Navigate to ***Route 53***
+* Click on ***hosted zones*** > ***Registered domain name***
+* Click ***Create record***. This record ensures the S3 url is routed to our domain name
+* Under ***Record name***, Enter a subdomain or leave blank to create a record for the root domain
+* Under ***Record type***, Select CNAME - Routes traffic to another domain name and to some AWS resources
+* For ***Value***, input the S3 bucket endpoint without the ***http://*** prefix
+* Leave the ***TTL*** as default 
+* Click ***Create records*** ![Screenshot (785)](https://github.com/user-attachments/assets/a13190c7-53bb-46e4-83b2-6e56bb7cf449)
 *  Wait a few minutes for the changes to be effected
 *  Reload the static website.
 *  Voila! the Static website now reflects the custom domain name
 
 **OOPPS!!! one more hurdle, the custom domain is Not Secure!!!**
 
-**How to Secure Custom Domain with TLS and CloudFront**
-* Navigate to Cloudfront from the search bar
-* Click New Distribution
-* Under Origin Domain, select the initial s3 bucket url > select Use website endpoint
-* Scroll down to Default cache behaviour > viewer > Select Redirect HTTP to HTTPS
-* Scroll down to Settings, Select your preferred price class
-* Under alternative domain name(CNAME), input the custom domain name
-* Under custom SSL Certificate, if you dont have a certificate, click on Request Certificate(This navigates you to Certificate Manager)
+**How to Secure Custom Domain with TLS and distribute with CloudFront**
+* Navigate to ***Cloudfront*** from the search bar
+* Click ***New Distribution***
+* Under ***Origin Domain***, select the initial s3 bucket url > select ***Use website endpoint***
+* Scroll down to ***Default cache behaviour*** > ***viewer*** > Select ***Redirect HTTP to HTTPS***
+* Scroll down to ***Settings***, Select your preferred price class
+* Under ***Alternative domain name(CNAME)***, input the custom domain name
+* Under ***custom SSL Certificate***, if you dont have a certificate, click on ***Request Certificate***(This navigates you to Certificate Manager)
 **The steps below are to create a new SSL Certificate.**
-  * Select Request a public Certificate and Click Next
+  * Select ***Request a public Certificate*** and Click ***Next***
   * Enter custom domain name of S3 bucket under Fully Qualified domain name
-  * Under Validation method, Select DNS validation
-  * Leave everything else as default and click on request.
-  * Click refresh to see the newly created certificate on the list of certificates.
-  * Click on the Certificate ID and under Domains, click on Create records in Route53 > click Create Record.
-  * The above navigates to the Certificate status page.
+  * Under ***Validation method***, Select ***DNS validation***
+  * Leave everything else as default and click on ***Request***.
+  * Click ***Refresh*** to see the newly created certificate on the list of certificates.
+  * Click on the ***Certificate ID*** and under ***Domains***, click on ***Create records*** in Route53 > click ***Create Record***.
+  * The above navigates to the ***Certificate status page***.
   * To confirm the DNS has been verified
-  * open route 53 on a new tab
-  * navigate to hosted zones > click on the domain name
+  * open ***Route 53*** on a new tab
+  * navigate to ***hosted zones*** > click on the domain name
   * On the list of records, you should now see the newly created CNAME
-  * Back in Certificate manager, wait till status shows Success and the Certificate ID status shows issued. You can keep refreshing till this happens
+  * Back in ***Certificate manager***, wait till status shows Success and the Certificate ID status shows issued. You can keep refreshing till this happens
 
 **Now the Certificate has been issued**
-* Go back to custom SSL Certificate under Settings under Distribution 
-* Click REfresh next to the certificate drop-down box
+* Go back to ***custom SSL Certificate*** under ***Settings*** under ***Distribution***
+* Click ***REfresh*** next to the certificate drop-down box
 * Select the newly issued certificate
-* Selectb enable security protections
-* Leave everything else to default and Click Create Distribution
+* Select ***enable security protections***
+* Leave everything else to default and Click ***Create Distribution***
 * Wait for distribution to be created
 * You can go back to distributions dashboard and click refresh button beside the Enable button till the last modified tab changes from Deploying
 * While waiting for the distribution to be created, you can go ahead and modify the Domain name provided by Cloudfront.
-* Right click and copy the Domain name
-* Navigate back to route 53
-* Click on the CNAME created for the S3 endpoint > Click Edit Record
+* Right click and copy the Cloudfront ***Domain name***
+* Navigate back to ***Route 53***
+* Click on the CNAME created for the S3 endpoint > Click ***Edit Record***
 * Change the value from the S3 endpoint to the Copied CloudFront endpoint
-* Click Save.
+* Click ***Save***.
 * Go back to the distribution dashboard and keep refreshing till it is deployed.
 * After it is deployed, verify the static website endpoint can be accessed using https://custom-domain-name
 
