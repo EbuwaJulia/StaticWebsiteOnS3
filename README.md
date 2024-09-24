@@ -26,10 +26,10 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 ### Procedure
 **Note: Follow the Green Arrow in the Visual Aids**
 * Navigate to Amazon Route53 to purchase a domain name
-* Click on Register Domain > input desired domain name in the Contact Details
-* Click Check to verify if domainname is available and if it is, Click Add to cart.
+* Click on Registered Domains > Register domain > input desired domain name in the Contact Details, for example EbuwaJulia.com > search
+* Under search result, if chosen domain name is available, click Select > Proceed to checkout ![Screenshot (784)](https://github.com/user-attachments/assets/8a72ea77-b673-4d52-81f7-0fdef4279f65)
+* Optionally Unclick Auto-Renew > Click Next
 * fill in your contact details.
-* Optionally Disable automatically renewing your domain
 * Accept terms and conditions and complete order.
 * Once the domain name has been created, navigate to Amazon S3.
 * Type S3 in the search bar at the top of the console dashboard and click S3. This leads to the S3 dashboard.![Screenshot (760)](https://github.com/user-attachments/assets/e84f5cf8-a6c9-47ae-8767-04fd2edc3c01)
