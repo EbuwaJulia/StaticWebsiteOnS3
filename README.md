@@ -62,13 +62,11 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Navigate to Route 53
 * Click on hosted zones > the registered domain name
 * Click Create record. This record ensures the S3 url is routed to our domain name
-* Choose simple routing policy, click next
-* Click define a simple record
-* for the value, select alias to s3 website endpoint
-* select the region where the s3 bucket was hosted
-* Select the S3 endpoint
-* optionally uncheck evaluate target health
-* Click define simple record > Create record
+* Under Record name, Enter a subdomain or leave blank to create a record for the root domain
+* Under Record type, Sekect CNAME -Routes traffic to another domain name and to some AWS resources
+* For Value, input the S3 bucket endpoint without the http:// prefix
+* Leave the TTL as default 
+* Click create records ![Screenshot (785)](https://github.com/user-attachments/assets/a13190c7-53bb-46e4-83b2-6e56bb7cf449)
 *  Wait a few minutes for the changes to be effected
 *  Reload the static website.
 *  Voila! the Static website now reflects the custom domain name
