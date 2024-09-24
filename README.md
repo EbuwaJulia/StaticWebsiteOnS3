@@ -63,14 +63,39 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Click on hosted zones > the registered domain name
 * Click Create record. This record ensures the S3 url is routed to our domain name
 * Under Record name, Enter a subdomain or leave blank to create a record for the root domain
-* Under Record type, Sekect CNAME -Routes traffic to another domain name and to some AWS resources
+* Under Record type, Select CNAME -Routes traffic to another domain name and to some AWS resources
 * For Value, input the S3 bucket endpoint without the http:// prefix
 * Leave the TTL as default 
 * Click create records ![Screenshot (785)](https://github.com/user-attachments/assets/a13190c7-53bb-46e4-83b2-6e56bb7cf449)
 *  Wait a few minutes for the changes to be effected
 *  Reload the static website.
 *  Voila! the Static website now reflects the custom domain name
-*  OOPS! one more hurdle, the custom domain is Not Secure
-**How to Secure Custom Domain**
-*
+
+**OOPPS!!! one more hurdle, the custom domain is Not Secure!!!**
+
+**How to Secure Custom Domain with TLS and CloudFront**
+* Navigate to Cloudfront from the search bar
+* Click New Distribution
+* Under Origin Domain, select the initial s3 bucket url > select Use website endpoint
+* Scroll down to Default cache behaviour > viewer > Select Redirect HTTP to HTTPS
+* Scroll down to Settings, Select your preferred price class
+* Under alternative domain name(CNAME), input the custom domain name
+* Under custom SSL Certificate, if you dont have a certificate, click on Request Certificate(This navigates you to Certificate Manager)
+**The steps below are to create a new SSL Certificate.**
+  * Select Request a public Certificate and Click Next
+  * Enter custom domain name of S3 bucket under Fully Qualified domain name
+  * Under Validation method, Select DNS validation
+  * Leave everything else as default and click on request.
+  * Click refresh to see the newly created certificate on the list of certificates.
+  * Click on the Certificate ID and under Domains, click on Create records in Route53 > click Create Record.
+  * The above navigates to the Certificate status page.
+  * To confirm the DNS has been verified
+  * open route 53 on a new tab
+  * navigate to hosted zones > click on the domain name
+  * On the list of records, you should now see the newly created CNAME
+  * Back in Certificate manager, wait till status shows Success and the Certificate ID status shows issued. You can keep refreshing till this happens
+**Now the Certificate has been issued**
+* Go back to custom SSL Certificate under Settings under Distribution 
+* REfresh
+
 
