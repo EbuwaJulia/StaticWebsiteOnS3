@@ -25,12 +25,18 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 ```
 ### Procedure
 **Note: Follow the Green Arrow in the Visual Aids**
-* Sign-in to AWS Management Console
+* Navigate to Amazon Route53 to purchase a domain name
+* Click on Register Domain > input desired domain name in the Contact Details
+* Click Check to verify if domainname is available and if it is, Click Add to cart.
+* fill in your contact details.
+* Optionally Disable automatically renewing your domain
+* Accept terms and conditions and complete order.
+* Once the domain name has been created, navigate to Amazon S3.
 * Type S3 in the search bar at the top of the console dashboard and click S3. This leads to the S3 dashboard.![Screenshot (760)](https://github.com/user-attachments/assets/e84f5cf8-a6c9-47ae-8767-04fd2edc3c01)
 * On the S3 dashboard, Click ***Create bucket***
-* Under General Configurations, Select ***General Purpose*** for Bucket type, input a *globally unique bucketname*.
+* Under General Configurations, Select ***General Purpose*** for Bucket type, input *your domain name*.
 * Under Object Ownership, Leave as Default ACLs Disabled(Recommended)
-* Under Block Public Access settings for this bucket, ***Unselect Block all public access***.  ![Screenshot (761)](https://github.com/user-attachments/assets/4ba79009-5460-4351-9a7a-460cc2731db5)
+* Under Block Public Access settings for this bucket, ***Uncheck Block all public access***.  ![Screenshot (761)](https://github.com/user-attachments/assets/4ba79009-5460-4351-9a7a-460cc2731db5)
 * Select the acknowledgement to turn off block public access. ![Screenshot (762)](https://github.com/user-attachments/assets/d85f1f8b-9ffa-499b-88e9-9539f5cca034)
 * Leave other options as Default and Click ***Create bucket***. This would take you to the bucket list on the S3 dashboard.
 * Double-click on your bucket name. Click ***Upload***.
@@ -51,6 +57,22 @@ To learn how to upload files, configure S3 for static hosting, and making the si
 * Replace Bucket-Name with your actual bucket name. ![Screenshot (767)](https://github.com/user-attachments/assets/df403e73-e1c1-4a00-97ea-001b7f06008c)
 * Scroll down and click ***Save changes***.
 * Refresh the website tab. Voila!!! Content is rendered.
-* You have successfully deployed a static website.
-
+* You have successfully deployed a static website. But at this point, the website is yet to reflect the domain website.
+**How to Change S3 bucket url to custom Domain name**
+* Navigate to Route 53
+* Click on hosted zones > the registered domain name
+* Click Create record. This record ensures the S3 url is routed to our domain name
+* Choose simple routing policy, click next
+* Click define a simple record
+* for the value, select alias to s3 website endpoint
+* select the region where the s3 bucket was hosted
+* Select the S3 endpoint
+* optionally uncheck evaluate target health
+* Click define simple record > Create record
+*  Wait a few minutes for the changes to be effected
+*  Reload the static website.
+*  Voila! the Static website now reflects the custom domain name
+*  OOPS! one more hurdle, the custom domain is Not Secure
+**How to Secure Custom Domain**
+*
 
